@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres estar conmigo para toda la eternidad?</title>
+    <style>
+        body {
+            background-color: #f0e1f4;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #d9007e;
+        }
+        .button {
+            background-color: #d9007e;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        .button:hover {
+            background-color: #c60072;
+        }
+        #imagen {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Micaela, ¿Quieres estar conmigo para toda la eternidad?</h1>
+    <button class="button" onclick="mostrarMensaje(1)">Sí</button>
+    <button class="button" onclick="mostrarMensaje(2)">Sí</button>
+    <button class="button" onclick="mostrarMensaje(3)">Sí</button>
+
+    <img id="imagen" src="" alt="Imagen romántica" width="300">
+
+    <script>
+        function mostrarMensaje(opcion) {
+            // Ocultar la imagen antes de mostrar la nueva
+            document.getElementById("imagen").style.display = "none";
+
+            // Mostrar la imagen y mensaje correspondiente
+            if (opcion === 1) {
+                document.getElementById("imagen").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdIE0hwi9J33ETtCZYBjq6p3Hpimhek6JlIA&s";
+                document.getElementById("imagen").style.display = "block";
+                alert("Eres mi niñita.");
+            } else if (opcion === 2) {
+                document.getElementById("imagen").src = "https://i.pinimg.com/736x/fe/97/60/fe976070fbf999dbd654cb19f47a36eb.jpg";
+                document.getElementById("imagen").style.display = "block";
+                alert("No sabes lo mucho que te amo.");
+            } else {
+                document.getElementById("imagen").src = "https://pbs.twimg.com/profile_images/660958663356608514/mbG7EBfA_400x400.jpg";
+                document.getElementById("imagen").style.display = "block";
+                alert("Eres lo mejor que me pasó. Te amo. Te amo.");
+            }
+        }
+    </script>
+</body>
+</html>
+
